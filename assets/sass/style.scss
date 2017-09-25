@@ -1,0 +1,503 @@
+@charset "utf-8";
+
+
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   14px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #6e6e70;
+$title-color:      #00cdc8;
+$background-color: #fff;
+$brand-color:      #00ccc8;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    1140px;
+
+$on-palm:          767px;
+$on-laptop:        1000px;
+$desktop-md:       1120px;
+
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+@import 'https://fonts.googleapis.com/css?family=Dancing+Script:700|Raleway:300,400,700',
+  "base",
+  "layout"
+;
+#body {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+}
+.parallax-esquerda, .parallax-direita {
+  pointer-events: none;
+  position: absolute;
+  width: 18%;
+
+  @include media-query($on-palm) {
+    display: none;
+  }
+  &.parallax-esquerda {
+    left: 0px;
+    bottom: 1700px;
+  }
+  &.parallax-direita {
+    right: 0px;
+    bottom: 1300px;
+  }
+}
+.title-section {
+  font-family: 'Dancing Script', cursive;
+  font-size: 34px;
+  color: $title-color;
+}
+.sub-title-section {
+  font-size: 17px;
+  font-weight: 700;
+  color: #59595b;
+}
+form {
+  input, textarea {
+    border: 1px solid #00ccc8;
+    background-color: #fff;
+    border-radius: 15px;    
+    padding: 0 10px;
+    height: 30px;
+    width: 100%;
+
+    &::-webkit-input-placeholder {
+      font-size: 12px;
+      color: #a7aaac; 
+    }
+  }
+  textarea {
+    height: 110px;
+    padding: 10px;
+  }
+  .label-opcoes {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    margin: 0px 15px 0px 0px;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid #00ccc8;
+      border-radius: 100%;
+      background: #fff;
+    }
+  }
+  input[type=radio] {
+    display: none;
+
+    &[type=radio]:checked + label:before {
+      background: #00ccc8;
+    }
+  }
+  .btn-enviar {
+    transition: .2s linear;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #00ccc8;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 20px;
+    padding: 8px 0;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #fff;
+
+    &:hover {
+      background-color: #00e5e0;
+    }
+  }
+}
+.site-header {
+  background: url(../images/fundo-header.png) no-repeat;
+  background-position: top center;
+  padding-top: 90px;
+  text-align: center;
+}
+.site-nav {
+  display: block;
+  padding:20px 0;
+  @extend %clearfix;
+  @include media-query($on-laptop) {
+    float:none;
+    margin:auto;
+    top:20%;
+
+    .menu-icon {
+      width:auto;
+      height:auto;
+      padding:10px;
+      border: 1px solid #00ccc8;
+      background: #00ccc8;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  @include media-query($on-palm) {
+    padding:10px;
+    border:0;
+    background:transparent;
+    position: relative;
+  }
+  .menu-over {
+    padding: 10px;
+    margin: 0;
+    z-index: 999;
+    @include media-query($on-palm) {
+      background:#fff;
+    }
+    &.show {
+      display: block;
+    }
+
+    .item-menu {
+      display:inline-block;
+      position: relative;
+      font-size: 18px;
+      padding: 0 10px;     
+      border-right: 2px solid #07bbb5;
+
+      &:last-child { border: none; }
+
+
+      @include media-query($desktop-md) {
+        font-size:16px;
+      }
+      @include media-query($on-palm) {
+        display:block;
+
+        &:after {
+          content:'';
+          display:none;
+        }
+      }
+    }
+    @include media-query($on-palm) {
+      top: 100%;
+      position: absolute;
+      display: none;
+      right: 0;
+      border: 1px solid #ccc;
+      border-top: 0;
+    }
+    .page-link {
+      color:#404041;
+      text-decoration: none;
+      padding-bottom: 5px;
+
+      &:hover {
+        color: #07bbb5;
+        border-bottom: 2px solid #07bbb5;
+      }
+      @include media-query($on-palm) {
+        &:hover {
+          border:0;
+        }
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+.menu-fixed {
+  display: none;
+  position: fixed;
+  padding: 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  background: rgba(255,255,255,.95);
+  background-size: cover;
+
+  .menu-over { 
+    padding: 5px;
+    .item-menu:nth-child(3) { border: none; }
+    .item-menu-logo {
+      border: none !important;
+
+      @include media-query($on-palm) { display: none; }
+      .page-link:hover { border: none; }
+    }
+  }
+  @include media-query($on-palm) {
+    background: transparent;
+    top: 10px;
+    left: -10px;
+  }
+}
+.section {
+  text-align: center;
+}
+.content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-query($on-palm) {
+    display: block;
+  } 
+}
+.noivos {
+  background: url(../images/fundo-noivos.png) no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+
+  .texto-noivos {
+    text-align: left;
+  }
+}
+.presenca {
+  padding: 25px 0 30px;
+
+  .separator-top {
+    margin-bottom: 30px;
+  }
+  .form-presenca {
+    text-align: left;
+    float: none;
+
+    input, textarea {
+      margin-bottom: 10px;
+    }
+    .email {
+      width: 58%;
+      float: left;
+
+      @include media-query($on-palm) { width: 100%; }
+    }
+    .telefone {
+      width: 40%;
+      float: right;
+
+      @include media-query($on-palm) { width: 100%; }
+    }
+    .btn-enviar {
+      float: left;
+      width: 50%;
+
+      @include media-query($on-palm) { 
+        width: 100%;
+        float: none;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+.presentes {
+  background: url(../images/fundo-presentes.png) no-repeat;
+  background-size: cover;
+  padding: 30px 0px 20px;
+
+  h2 {
+    color: #fff;
+    font-size: 48px;
+  }
+  p {
+    font-size: 17px;
+    color: #58585b;
+  }
+  .btn-presentes {
+    transition: .2s linear;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    text-transform: uppercase;
+    border-radius: 15px;
+    padding: 10px 70px;
+    margin-top: 10px;
+    font-size: 21px;
+    color: #808284;
+
+    &:hover {
+      background-color: #00ccc8;
+      color: #fff;
+    }
+  }
+}
+.local {
+  padding: 30px 0;
+
+  .content-section {
+    align-items: flex-start;
+  }
+  .title-section {
+    margin-bottom: 30px;
+  }
+  .map-local {
+    border: 2px solid #6be2df;    
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 0px;
+  }
+  .endereco-local {
+    text-align: left;
+    margin-top: 20px;
+
+    .endereco {
+      font-size: 17px;
+      margin-bottom: 30px;
+
+      @include media-query($on-palm) { font-size: 15px; }
+    }
+  }
+}
+.contagem {
+  padding: 50px 0 100px;
+
+  .separator {
+      margin-bottom: 30px;
+  }
+  .contador {
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    margin-top: 50px;
+    font-size: 46px;
+    color: #404041;
+    z-index: 99;
+
+    span {
+      font-size: 29px;
+      color: #0abbb6;
+    }
+  }
+}
+.recados {
+  background: url(../images/fundo-recados.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 0px 70px;
+
+  .hashtag-fotos {
+    padding: 50px 0px;
+  }
+  .hashtag {
+    text-decoration: none;
+    font-size: 20px;
+    color: #59595b;
+
+    &:hover { color: #00ccc8; }
+  }
+  .form-recados {
+    margin: auto;
+    float: none;
+
+    input, textarea {
+      margin-bottom: 20px;
+    }
+    .btn-enviar {
+      width: 60%;
+
+      @include media-query($on-palm) { width: 100%; }
+    }
+  }
+}
+.music-site {
+  background-color: #00cdc8;
+  border-radius: 100%;
+  position: fixed;
+  padding: 5px 5px 10px 10px;
+  bottom: -20px;
+  left: -20px;
+  z-index: 999;
+
+  button {
+    outline: none;
+    border: none;
+    background: transparent;
+
+    svg {
+      width: 60px;
+      height: auto;
+    }
+  }
+  .ytp-play-button {
+    fill: #fff;
+    opacity: 0.85;
+  }
+  .ytp-play-button:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+  .pulse, .pulse2{  
+    position: absolute;
+    z-index: -1;
+    height: 83px;
+    width: 87px;
+    top: 0px;
+    left: 0px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      transform: scale(0.1, 0.1);
+      border-radius: 50%;
+      height: 100%;
+      width: 100%;    
+      left: 0px;
+      top: 0px;
+      box-shadow: 0 0 1px 3px #00cdc8;;
+      opacity: 0.5;     
+    }
+  }
+}
+.play .pulse:after {    
+  animation: pulsate 3s ease-out;
+  animation-iteration-count: infinite    
+}
+.play .pulse2:after {
+  animation: pulsate 0.7s ease-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.7s;
+} 
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.2;
+  }
+  100% {
+    transform: scale(1.4, 1.4);
+    opacity : 0;
+  }
+}

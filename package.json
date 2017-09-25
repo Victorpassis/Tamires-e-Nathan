@@ -1,0 +1,19 @@
+{
+  "name": "Tamires e Nathan",
+  "version": "1.0.0",
+  "description": "Site de Casamento Tamires e Nathan",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Pereira de Assis",
+  "license": "ISC"
+}

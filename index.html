@@ -1,0 +1,208 @@
+ <!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tamires e Nathan</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png"/>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+     <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sweetalert.css">
+
+    <!-- JavaScript/Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="assets/js/enviar-email.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/plugins/jquery.countdown.min.js"></script>
+    <script src="assets/js/plugins/sweetalert.min.js"></script>
+</head>
+<body id="body">
+    <img class="parallax-esquerda" src="assets/images/parallax-esquerda.png">
+    <img class="parallax-direita" src="assets/images/parallax-direita.png">
+    <header class="site-header" id="topo">
+        <div class="wrapper">
+            <a class="site-title" href="#topo"><img src="assets/images/logo-site.png" class="site-logo"></a>
+            <nav class="site-nav">
+                <button class="menu-icon">
+                    <svg viewBox="0 0 18 15">
+                        <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                        <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                        <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                    </svg>
+                </button>
+
+                <ul class="menu-over">
+                    <li  class="item-menu">
+                        <a class="page-link" href="#topo">Home</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#noivos">Os Noivos</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#presenca">Confirme sua Presença</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#presentes">Lista de Presentes</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#local">Local</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#recados">Recados</a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="site-nav menu-fixed">
+                <button class="menu-icon">
+                    <svg viewBox="0 0 18 15">
+                        <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+                        <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+                        <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+                    </svg>
+                </button>
+
+                <ul class="menu-over">
+                    <li  class="item-menu">
+                        <a class="page-link" href="#topo">Home</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#noivos">Os Noivos</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#presenca">Confirme sua Presença</a>
+                    </li>
+                    <li  class="item-menu item-menu-logo">
+                        <a class="page-link" href="#topo"><img src="assets/images/logo-menu.png"></a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#presentes">Lista de Presentes</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#local">Local</a>
+                    </li>
+                    <li  class="item-menu">
+                        <a class="page-link" href="#recados">Recados</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="noivos" class="noivos section">
+        <div class="wrapper content-section">            
+            <div class="texto-noivos col-md-6 col-sm-7">
+                <h2 class="title-section">Os noivos</h2>
+                <p>Nossa história não começou há muito tempo... apenas há tempo suficiente para que Deus fizesse uma grande obra nas nossas vidas.<br>
+                Ela, toda tímida, entrou na Idea para trabalhar.<br>
+                Ele, muito piadista, logo se esforçou pra enturmá-la.<br>
+                Não precisou de muito pra gente se dar bem: tínhamos muita coisa em comum e o assunto fluía das 8h às 23h todo santo dia. Dia 18/10/15 saímos juntos pela primeira vez. Um ano depois, começamos a namorar e o pedido foi feito onde tudo começou: na Idea.<br><br>
+                Como ainda temos assunto para uma vida inteira, resolvemos nos casar! Todo esse processo tem sido tão divertido quanto estressante, confessamos! O frio na barriga só aumenta conforme os dias correm, e não é à toa! Dia 16 de setembro de 2017 será o primeiro dos dias mais felizes de nossas vidas!<br><br>
+                Nosso casamento será, sobretudo, a realização de um grande sonho, que Deus sonhou primeiro pra nós. E prova disto são todos os pequenos e grandes milagres com os quais temos sido agraciados no caminho. A família é o mais belo plano de Deus para seus filhos, e não vemos a hora de nos tornarmos uma, "para que todos vejam, e saibam, e considerem, e juntamente entendam que a mão do Senhor fez isto, e o Santo de Israel o criou."<br>
+                Isaías 41:20.
+                </p>
+            </div>
+            <div class="foto-noivos col-md-5 col-sm-5">
+                <img src="assets/images/noivos.png" alt="Tamires e Nathan">
+            </div>
+        </div>        
+    </section>
+    <section id="presenca" class="presenca section">
+        <img class="separator separator-top" src="assets/images/separador.png">
+        <h2 class="title-section">Confirme sua Presença</h2> 
+        <div class="wrapper content-section">                 
+            <form class="form-presenca col-md-6 col-sm-7" name="enviar-email" method="post" action="envia-email.php">
+                <input class="tipo-email" type="hidden" name="tipo-email" value="presenca">
+                <input type="text" placeholder="Nome do convidado" name="nome">
+                <input type="email" placeholder="E-mail" class="email" name="email">
+                <input type="text" placeholder="Telefone" class="telefone" name="telefone">
+
+                <div class="confirmar-presenca">
+                    <input id="vou" type="radio" name="presenca" value="Eu vou">
+                    <label class="label-opcoes" for="vou">Eu vou</label>
+                    <input id="nao-vou" type="radio" name="presenca" value="Não vou">
+                    <label class="label-opcoes" for="nao-vou">Não vou</label>
+                </div>
+
+                <button class="btn-enviar">Confirmar Presença</button>
+
+                <!-- <button value="submit" type="submit" class="btn-enviar">Confirmar Presença</button> -->
+            </form>
+            <div class="icon-presenca col-sm-5">
+                <img src="assets/images/icon-presenca.png">
+            </div>
+        </div>   
+    </section>
+    <section id="presentes" class="presentes section">
+        <h2 class="title-section">Lista de Presentes</h2> 
+        <div class="wrapper content-section">                 
+            <div class="form-presenca col-md-5 col-sm-6">
+                <p>Caso deseje nos presentear, clique para ver<br>nossa sugestão de presentes</p>
+
+                <a href="https://www.querodecasamento.com.br/lista-de-casamento/tamiresenathan/" target="_blank" class="btn-presentes">Acessar lista</a>
+            </div>
+            <div class="icon-presenca col-md-5 col-sm-6">
+                <a href="https://www.querodecasamento.com.br/lista-de-casamento/tamiresenathan/" target="_blank"><img src="assets/images/icon-presentes.png"></a>
+            </div>
+        </div>        
+        <img class="separator" src="assets/images/separador-branco.png">       
+    </section>
+    <section id="local" class="local section">
+        <h2 class="title-section">Local</h2> 
+        <div class="wrapper content-section">                 
+            <div class="map-local col-md-5 col-sm-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1545.9630539111974!2d-46.32791272677874!3d-22.84168975982621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceadadbe8ff771%3A0x4d2214b7c29147fd!2sEspa%C3%A7o+Village!5e0!3m2!1spt-BR!2sbr!4v1498563156434" width="100%" height="325" frameborder="0" style="border:0; margin-bottom:-6px" allowfullscreen></iframe>
+            </div>
+            <div class="endereco-local col-md-4 col-sm-6 col-md-offset-1">
+                <h3 class="sub-title-section">ESPAÇO VILLAGE</h3>
+                <p class="endereco">Rua Isaura Franco de Oliveira, 10<br>Ponte Nova - Extrema / MG<br>CEP: 37640-000</p>
+                <p class="horario-cerimonia">A cerimônia está programada para começar às 16:00 horas. A festa será realizada no mesmo local logo após o termino da cerimônia.</p>
+            </div>
+        </div>        
+    </section>
+    <section id="contagem" class="contagem section">
+        <img class="separator" src="assets/images/separador.png">
+        <h2 class="title-section">Contagem Regressiva</h2>
+        <div class="contador"></div>
+    </section>
+    <section id="recados" class="recados section">
+        <h2 class="title-section">Recados</h2>
+        <p>Deixe seu recado para os noivos!</p>
+
+        <div class="wrapper">
+            <form class="form-recados col-md-6 col-sm-8" name="enviar-email" method="post" action="envia-email.php">
+                <input class="tipo-email" type="hidden" name="tipo-email" value="recado">
+                <input type="text" placeholder="Nome do convidado" name="nome">
+                <input type="email" placeholder="E-mail" class="email" name="email">
+                <textarea placeholder="Recado" name="recado"></textarea>
+
+                <button class="btn-enviar">Enviar recado</button>
+            </form>
+            <div class="hashtag-fotos">
+                <h2 class="title-section">Use a nossa hashtag em suas fotos!</h2>
+                <a href="https://www.instagram.com/explore/tags/tamiresenathan/?hl=pt-br" target="_blank" class="hashtag">#tamiresenathan</a>
+            </div>
+        </div>
+        <img src="assets/images/icon-carro.png">
+    </section>
+    <section class="music-site play">
+        <audio id="music-play" src="assets/music/Christina Perri - A Thousand Years [Official Music Video].mp3" autoplay loop></audio>
+        <button class="ytp-play-button ytp-button" aria-live="assertive" tabindex="32" aria-label="Pause">
+            <svg width="100%" height="100%" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs><path id="ytp-12" d="M 11 10 L 17 10 L 17 26 L 11 26 M 20 10 L 26 10 L 26 26 L 20 26"><animate id="animation" begin="indefinite" attributeType="XML" attributeName="d" fill="freeze" from="M11,10 L17,10 17,26 11,26 M20,10 L26,10 26,26 20,26" to="M11,10 L18,13.74 18,22.28 11,26 M18,13.74 L26,18 26,18 18,22.28"
+                dur="0.1s" keySplines=".4 0 1 1" repeatCount="1"></animate></path></defs>
+                <use xlink:href="#ytp-12" class="ytp-svg-shadow"></use>
+                <use xlink:href="#ytp-12" class="ytp-svg-fill"></use>
+            </svg>
+        </button>
+
+        <div class="pulse"></div>
+        <div class="pulse2"></div>
+    </section>
+</body>
+</html>
